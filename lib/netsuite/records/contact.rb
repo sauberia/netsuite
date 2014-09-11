@@ -11,7 +11,7 @@ module NetSuite
 
       fields :salutation, :first_name, :middle_name, :last_name, :title, :phone, :fax, :email, :default_address,
              :entity_id, :phonetic_name, :alt_email, :office_phone, :home_phone, :mobile_phone, :supervisor_phone,
-             :assistant_phone, :comments, :bill_pay, :is_private, :is_inactive
+             :assistant_phone, :comments, :bill_pay, :is_private, :is_inactive, :global_subscription_status
 
       field :addressbook_list,  CustomerAddressbookList
       field :custom_field_list, CustomFieldList
@@ -20,7 +20,7 @@ module NetSuite
 
       read_only_fields :last_modified_date, :date_created
 
-      record_refs :custom_form, :company, :subsidiary, :supervisor, :assistant, :image, :global_subscription_status
+      record_refs :custom_form, :company, :subsidiary, :supervisor, :assistant, :image
 
       attr_reader   :internal_id
       attr_accessor :external_id
